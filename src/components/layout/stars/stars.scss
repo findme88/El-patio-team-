@@ -1,0 +1,12 @@
+.stars {
+    height: 15px;
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+
+    &__item {
+      width: 15px;
+      height: 15px;
+    }
+}

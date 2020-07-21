@@ -1,0 +1,55 @@
+@import "../../../index";
+
+.event {
+  width: 88%;
+  height: 85%;
+  border: solid 2px #ffffff;
+  color: inherit;
+  z-index: 0;
+  background: #09090940;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: #F8AB11;
+    border: solid 2px #F8AB11;
+  }
+
+  @media (max-width: 1600px) {
+    width: 85%;
+    height: 82%;
+    border: solid 1px #ffffff;
+  }
+
+  @media (max-width: $mobile) {
+    border: solid 2px #F8AB11;
+    background: #09090980;
+  }
+
+  &__title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+
+    @media (max-width: 1600px) {
+      font-size: 35px;
+      line-height: 35px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 25px;
+      line-height: 25px;
+      color: #F8AB11;
+    }
+
+    @media (max-width: $mobile-portrait) {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}

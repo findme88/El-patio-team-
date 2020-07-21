@@ -1,0 +1,104 @@
+@import "../../index";
+
+.market {
+  font-family: 'Josefin Sans', sans-serif;
+  background: #ffffff;
+}
+
+.border {
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+}
+
+.market-banner {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#09090940, #09090940), url(market_banner.png) no-repeat top center;
+    background-size: cover;
+    // border-bottom-left-radius: 35%;
+    // border-bottom-right-radius: 35%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+
+    @media (max-width: $desktop) {
+      width: 90%;
+    }
+
+    @media (max-width: $mobile) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__slogan {
+    font-size: 250px;
+    line-height: 150px;
+
+    @media (max-width: 1600px) {
+      font-size: 200px;
+      line-height: 100px;
+    }
+  }
+
+  &__page-name {
+    font-size: 100px;
+    line-height: 100px;
+
+    @media (max-width: 1600px) {
+      font-size: 80px;
+      line-height: 80px;
+    }
+  }
+
+  & .button:hover, & .button:active {
+    background: linear-gradient(#F8AB11, #7b560a);
+    border: none;
+    color: #fff;
+  }
+}
+
+.market__navigation {
+  width: 945px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+
+  @media (max-width: $desktop) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+  }
+}
+
+.market__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & * {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+.market .active::after {
+  display: none;
+}

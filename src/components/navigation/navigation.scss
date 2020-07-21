@@ -1,0 +1,196 @@
+@import "../../index";
+
+.navigation {
+  &__menu {
+    @include pos(fixed, $t: 35px, $r: 15px, $z: 99);
+    padding: 10px;
+    transition: 0.3s;
+    z-index: 100;
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__input {
+    display: none;
+    &:checked {
+      + .navigation__menu {
+        width: 40px;
+        right: 3%;
+        .burger-menu {
+          span {
+            display: none;
+          }
+          &::before {
+            transform: rotate(47deg);
+          }
+          &::after {
+            transform: rotate(-47deg);
+          }
+        }
+      }
+      ~ .navmenu {
+        right: 0;
+        @include size(100%, 100vh);
+        background-color: $grey;
+        opacity: 0.9;
+        color: white;
+      }
+    }
+  }
+}
+
+.burger-menu {
+  @mixin line($top: 0) {
+    background: $orange;
+    border-radius: 3px;
+    position: absolute;
+    top: $top;
+    transition: 0.3s;
+    z-index: 199;
+
+    @include size(100%, 3px);
+  }
+
+  @include size(25px, 20px);
+  display: block;
+  position: relative;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+
+  span {
+    display: block;
+    transform: translateY(-50%);
+    @include line(50%);
+    z-index: 199;
+  }
+
+  &::before {
+    @include line();
+    content: "";
+    transform-origin: 0 0;
+  }
+
+  &::after {
+    @include line(calc(100% - 3px));
+    content: "";
+    transform-origin: 0 100%;
+  }
+}
+
+.navmenu {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 120px;
+  overflow-x: hidden;
+
+  @media (max-width: $desktop) {
+    @include pos(fixed, $z: 1, $t: 0, $r: -250px);
+    @include size(200px, 100%);
+    transition: 0.3s;
+    padding-top: 30px;
+    display: block;
+    z-index: 99;
+  }
+
+  &__item {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: $JosefinSans;
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 50px;
+    position: relative;
+
+    @media (max-width: $mobile) {
+      color: $grey;
+      font-size: 14px;
+    }
+
+
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 1px;
+      background-color: $orange;
+      position: absolute;
+      left: 50%;
+      bottom: -2px;
+      transition: 0.3s;
+      
+      // transform: translateX(50%);
+    }
+
+    &:active,
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: currentColor;
+    
+
+    @media (max-width: $desktop) {
+      display: block;
+      margin: 30px;
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      padding: 15px;
+      text-align: center;
+      background: $white;
+      margin: 25px;
+      color: $grey;
+
+      
+       &:hover {
+        color: $white;
+        background: rgb(39, 37, 37);
+      }
+  }
+}
+}
+
+.active::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: $orange;
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transition: 0.3s;
+  transform: translateX(-50%);
+
+  @media (max-width: $desktop) {
+    display: none;
+  }
+}
+
+.burger {
+  position: absolute;
+}

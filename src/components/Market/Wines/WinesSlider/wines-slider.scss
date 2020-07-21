@@ -1,0 +1,69 @@
+@import "../../../../index";
+
+.wines__list {
+  padding-top: 100px;
+  width: 80%;
+
+  @media (max-width: $mobile) {
+    width: 70%;
+    padding-top: 30px;
+  }
+
+  @media (max-width: $mobile-portrait) {
+    width: 100%;
+  }
+}
+
+.wines__image {
+  margin-bottom: 20px;
+
+  & img {
+  width: 360px;
+  height: 260px;
+  transition: .5s;
+
+  &:hover {
+    cursor: pointer;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 10);
+    z-index: 100;
+    border: none;
+  }
+
+    @media (max-width: 1600px) {
+      @include size(300px, 230px);
+    }
+
+    @media (max-width: 1400px) {
+      @include size(240px, 185px);
+      padding: 0 10px;
+    }
+
+    @media (max-width: $desktop) {
+      padding: 0 10px;
+    }
+
+    @media (max-width: $mobile) {
+      @include size(100%);
+      margin-bottom: 0px;
+      padding: 0 10px;
+    }
+  }
+}
+
+.wines .slides .slick-prev:after {
+  position: absolute;
+  left: -50px;
+  z-index:1;
+  content: "←";
+  color: #F8AB11;
+  font-size: 30px;
+}
+
+.wines .slides .slick-next:after {
+  position: absolute;
+  z-index:1;
+  content: "→";
+  right: -50px;
+  color: #F8AB11;
+  font-size: 30px;
+}

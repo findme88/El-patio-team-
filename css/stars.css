@@ -1,0 +1,12 @@
+.star {
+  height: 15px;
+  width: 115px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px auto;
+}
+/*# sourceMappingURL=stars.css.map */

@@ -1,0 +1,83 @@
+.third-step {
+    &__content {
+        width: 700px;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 2;
+        top: 250px;
+        left: calc(50% - 350px);
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__title{
+        font-family: Josefin Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #F8AB11;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__item-1,
+    &__item-2 {
+        margin-bottom: 17px;
+    }
+
+    &__item-2 {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+input[type="checkbox"]:checked, 
+input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.third-step__input-1:checked + label:before, 
+.third-step__input-1:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -1px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label:before {
+    border-color: #F8AB11;
+}
+
+.third-step__input-1:checked + label:after {
+    content: "";
+    background: url('./choose-icon.png') no-repeat;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before {
+    border-radius: 50%;
+}

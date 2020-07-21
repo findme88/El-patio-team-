@@ -1,0 +1,278 @@
+@import "../../../index.scss";
+
+.menu-title {
+
+    @media (max-width: $mobile) {
+        margin-top: 30px;
+    }
+
+    margin-top: 60px;
+}
+
+.menu-nav {
+    &__list {
+
+        @media (max-width: $mobile) {
+            margin-top: 0px;
+        }
+
+        margin-top: 25px;
+    }
+
+    &__item {
+
+        @media (max-width: $mobile) {
+            font-size: 24px;
+        }
+
+        transition: .2s;
+        font-family: Josefin Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 40px;
+
+        &:hover {
+            color: #F8AB11;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+
+    &__slash {
+
+        @media (max-width: $mobile) {
+            font-size: 30px;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+
+        font-family: Josefin Sans;
+        margin: 0 9px;
+        margin-top: 9px;
+        font-weight: normal;
+        font-size: 45px;
+    }
+}
+
+.menu-container {
+    display: flex;
+    width: 100%;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__filter {
+
+        @media (max-width: $mobile) {
+            margin: 0;
+            // margin-top: 20px;
+        }
+
+        margin-top: 50px;
+        margin-left: 100px;
+        position: relative;
+    }
+
+    &__list {
+
+        @media (max-width: $mobile) {
+            width: 180px;
+        }
+
+        width: 200px;
+        position: relative;
+    }
+
+    &__item {
+
+        @media (max-width: $mobile) {
+            margin-bottom: 35px;
+        }
+
+        display: flex;
+        // flex-direction: row-reverse;
+        margin-bottom: 60px;
+        transition: .3s;
+
+        &:hover span{
+            color: #F8AB11;
+        }
+
+        &:hover .menu-container__circle {
+            background-color: #F8AB11;
+        }
+    }
+
+    &__circle {
+
+        @media (max-width: $mobile) {
+            width: 17px;
+            height: 17px;
+        }
+
+        width: 23px;
+        height: 23px;
+        border: 1px solid #F8AB11;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    &__text {
+
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            margin-top: 1px;
+        }
+
+        width: 160px;
+        font-family: Josefin Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        color: #706E6E;
+        position: absolute;
+        left: 30px;
+        cursor: pointer;
+    }
+
+    &__horizontal-line {
+
+        @media (max-width: $mobile) {
+            height: 180px;
+            left: 8px;
+            top: 12px;
+        }
+
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        top: 22px;
+        left: 11px;
+        background-color: #F8AB11;
+        height: 300px;
+    }
+
+    &__horizontal-line-2 {
+
+        @media (max-width: $mobile) {
+            height: 110px;
+            left: 8px;
+            top: 12px;
+        }
+
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        top: 22px;
+        left: 11px;
+        background-color: #F8AB11;
+        height: 180px;
+    }
+
+    &__horizontal-line-3 {
+
+        @media (max-width: $mobile) {
+            height: 110px;
+            left: 8px;
+            top: 12px;
+        }
+
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        top: 22px;
+        left: 11px;
+        background-color: #F8AB11;
+        height: 180px;
+    }
+}
+
+.menu-underscore {
+    color: #F8AB11;
+    text-decoration: underline;
+}
+
+.menu-choose span{
+    text-decoration: underline;
+    color: #F8AB11;
+}
+
+.menu-choose > .menu-container__circle {
+    background-color: #F8AB11;
+}
+
+.dish {
+    background: url(../../Home/popular-dishes/dish/images/1.png) no-repeat center;
+    background-size: cover;
+    @include size(360px);
+    position: relative;
+    border: 15px solid #ffffff;
+
+    @media (max-width: 1600px) {
+        @include size(300px);
+    }
+
+    @media (max-width: $mobile) {
+        height: 250px;
+        width: 250px;
+    }
+
+    @media (max-width: $mobile-portrait) {
+        height: 300px;
+        width: 300px;
+    }
+
+    &__info {
+        font-family: 'Josefin Sans', sans-serif;
+        position: absolute;
+        border: 2px solid #ffffff;
+        padding: 10px;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        left: 10px;
+        bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        text-align: left;
+        text-transform: uppercase;
+        color: #F8AB11;
+        padding-bottom: 5px;
+    }
+
+    &__price {
+        padding: 15px 0;
+    }
+
+    p {
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    span {
+        font-weight: 400;
+    }
+}
+
+.--absolute {
+    @media (max-width: 1200px) {
+        display: none;
+    }
+
+    margin-left: 100px;
+    background: url('../../Home/popular-dishes/dish/images/10.png');
+}
+
+.menu-pictures {
+    display: flex;
+    flex-direction: column;
+}

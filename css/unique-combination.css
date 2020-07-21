@@ -1,0 +1,26 @@
+.unique-combination {
+  width: 100%;
+  height: 100vh;
+  background: url(../unique-combination/images/uniquecombination.jpg) no-repeat top center;
+  background-size: cover;
+  z-index: -2;
+}
+
+.unique-combination .wrap {
+  height: inherit;
+  padding: 0 7%;
+}
+
+.unique-combination__content {
+  height: 100%;
+  color: #fff;
+}
+
+.unique-combination__content-box {
+  padding-top: 150px;
+}
+
+.unique-combination .description {
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=unique-combination.css.map */

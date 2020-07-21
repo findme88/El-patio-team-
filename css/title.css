@@ -1,0 +1,31 @@
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title__slogan {
+  font-family: 'Lovers Quarrel', sans-serif;
+  text-align: center;
+  color: #F8AB11;
+  font-size: 200px;
+  line-height: 90px;
+}
+
+.title__name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
+}
+/*# sourceMappingURL=title.css.map */

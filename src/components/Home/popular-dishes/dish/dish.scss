@@ -1,0 +1,98 @@
+@import "../../../../index";
+
+.dish {
+
+    
+
+    &__wrap{
+        @include size(300px);
+        border: 15px solid white;
+        background-size: cover;
+
+        @media (max-width: $desktop) {
+            @include size(200px);
+        }
+
+        @media (min-width: 1600px) {
+            @include size(400px);
+        }
+    }
+
+    &__img{
+        @include size(90%);
+        @include pos($t:50%, $l:50%);
+        transform: translate(-50%, -50%);
+    }
+
+    @include size(300px);
+    max-width: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    background: none;
+    // padding: 20px;
+    // margin: 10px;
+
+    @media (max-width: 1600px) {
+        @include size(300px);
+    }
+
+    @media (max-width: $mobile) {
+        height: 250px;
+        width: 250px;
+    }
+
+    @media (max-width: $mobile-portrait) {
+        height: 300px;
+        width: 300px;
+    }
+
+    &__info {
+        font-family: 'Josefin Sans', sans-serif;
+        background: #09090940;
+        position: absolute;
+        border: 2px solid #ffffff;
+        padding: 10px;
+        @include size(70%);
+        left: 0;
+        top: 4%;
+        // transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        text-align: left;
+        text-transform: uppercase;
+        color: #F8AB11;
+        padding-bottom: 5px;
+        color: #fff;
+    }
+
+    &__desc {
+        color: #fff;
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    &__price {
+        padding: 15px 0;
+        color: #fff;
+
+        @media (max-width: $desktop) {
+            display: none;
+        }
+    }
+
+    p {
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+    span {
+        font-weight: 400;
+    }
+}

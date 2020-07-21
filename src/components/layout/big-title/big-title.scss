@@ -1,0 +1,60 @@
+@import "../../../index";
+
+.big-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__slogan {
+    font-family: $Lovers;
+    text-align: center;
+    color: $orange;
+    font-size: 250px;
+    line-height: 150px;
+
+    @media (max-width: 1600px) {
+      font-size: 200px;
+      line-height: 80px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 130px;
+      line-height: 80px;
+    }
+
+    @media (max-width: $mobile-portrait) {
+      font-size: 80px;
+      line-height: 90px;
+    }
+  }
+
+  &__name {
+    font-family: $JosefinSans;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+
+    @media (max-width: 1600px) {
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    @media (max-width: $desktop) {
+      font-size: 50px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @media (max-width: $mobile-portrait) {
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../../index";
+
+.catering-banner {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+
+  & .big-title__slogan {
+    @media (max-width: $desktop) {
+      font-size: 120px;
+      line-height: 80px;
+    }}
+
+  @media (max-width: $desktop) {
+    height: fit-content;
+  }
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#09090940, #09090940), url(../banner/catering_banner.png) no-repeat top center;
+    background-size: cover;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $desktop) {
+      border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%;
+      padding: 100px 50px 0;
+    }
+
+    @media (max-width: $mobile) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      padding: 50px 0;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    width: 100%;
+  }
+
+  &__slogan {
+    font-size: 250px;
+    line-height: 150px;
+
+    @media (max-width: 1600px) {
+      font-size: 200px;
+      line-height: 100px;
+    }
+  }
+
+  &__page-name {
+    font-size: 100px;
+    line-height: 100px;
+
+    @media (max-width: 1600px) {
+      font-size: 80px;
+      line-height: 80px;
+    }
+  }
+
+  &__buttons {
+    width: 945px;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+
+    @media (max-width: $desktop) {
+      max-width: 80%;
+    }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 220px;
+    }
+  }
+
+  & .button:hover, & .button:active {
+    background: linear-gradient(#F8AB11, #7b560a);
+    border: none;
+    color: #fff;
+  }
+}
+
+.catering .active::after {
+  display: none;
+}

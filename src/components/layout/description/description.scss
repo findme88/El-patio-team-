@@ -1,0 +1,15 @@
+@import "../../../index";
+
+.description {
+  max-width: 600px;
+  font-family: $JosefinSans;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  margin: auto;
+
+  @media (max-width: $mobile) {
+    max-width: 90%;
+  }
+}

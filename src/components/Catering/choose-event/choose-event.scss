@@ -1,0 +1,184 @@
+@import "../../../index";
+
+.choose-event {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #706E6E;
+  position: relative;
+  z-index: 1;
+  font-family: $JosefinSans;
+
+  &::before {
+    content: '';
+    background: url(../choose-event/images/bell_pepper.png) no-repeat top center;
+    background-size: contain;
+    z-index: -20;
+    width: 600px;
+    height: 1100px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+
+    @media (max-width: 1600px) {
+      width: 450px;
+      height: 800px;
+    }
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    background: url(../choose-event/images/greenery.png) no-repeat top center;
+    background-size: contain;
+    z-index: -20;
+    width: 430px;
+    height: 1311px;
+    position: absolute;
+    top: 420px;
+    right: 0;
+    z-index: -10;
+
+    @media (max-width: 1600px) {
+      width: 301px;
+      height: 918px;
+    }
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+
+  
+  
+  & a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 30px;
+    transition: .5s;
+  }
+
+  &__title {
+    padding: 60px 0 100px;
+  }
+
+  &__list {
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 1600px) {
+      width: 1000px;
+    }
+
+    @media (max-width: $desktop) {
+      margin-bottom: 20px;
+      justify-content: space-evenly;
+      width: 90%;
+    }
+  }
+  
+  &__item {
+    color: white;
+    width: 400px;
+    height: 530px;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    @media (max-width: 1600px) {
+      width: 300px;
+      height: 400px;
+    }
+
+    @media (max-width: $mobile) {
+      @include size(200px);
+    }
+
+    @media (max-width: $mobile-portrait) {
+      @include size(110px);
+    }
+
+    &--corp {
+      background: linear-gradient(#09090940, #09090940), url(../choose-event/images/corporate.png) no-repeat top center;
+
+      @media (max-width: $desktop) {
+        margin-top: 10px;
+      }
+    }
+
+    &--bbq {
+      background: linear-gradient(#09090940, #09090940), url(../choose-event/images/bbq.png) no-repeat top center;
+      margin-top: 20px;
+
+      @media (max-width: $desktop) {
+        margin-top: 10px;
+      }
+    }
+
+    &--wed {
+      background: linear-gradient(#09090940, #09090940), url(../choose-event/images/wedding.png) no-repeat top center;
+      margin-top: 40px;
+
+      @media (max-width: $desktop) {
+        margin-top: 10px;
+      }
+    }
+
+    &--birthday {
+      background: linear-gradient(#09090940, #09090940), url(../choose-event/images/birthday.png) no-repeat top center;
+
+      @media (max-width: $desktop) {
+        margin-top: 10px;
+      }
+    }
+
+    &--party {
+      background: linear-gradient(#09090940, #09090940), url(../choose-event/images/party.png) no-repeat top center;
+      margin-top: 20px;
+
+      @media (max-width: $desktop) {
+        margin-top: 10px;
+      }
+    }
+
+    &--other {
+      background: linear-gradient(#09090940, #09090940), url(../choose-event/images/other.png) no-repeat top center;
+      margin-top: 40px;
+
+      @media (max-width: $desktop) {
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  &__progress {
+    width: 325px;
+    height: 20px;
+    border-radius: 10px/50%;
+    background: #FCDDA0;
+    position: relative;
+    margin: 20px 0 70px;
+
+    &::after {
+      content: '';
+      width: 20%;
+      height: 20px;
+      background: #F8AB11;
+      border-radius: 10px/50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+

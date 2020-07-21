@@ -1,0 +1,39 @@
+@import "../../../index";
+
+.unique-combination {
+    width: 100%;
+    height: 100vh;
+    background: url(../unique-combination/images/uniquecombination.jpg) no-repeat top center;
+    background-size: cover;
+    z-index: -2;
+
+    @media (max-width: $mobile) {
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+
+        & .wrap {
+            height: inherit;
+            padding: 0 7%;
+        }
+  
+        &__content {
+            height: 100%;
+            color: #fff;
+
+            &-box {
+                padding-top: 150px;
+
+                @media (max-width: $mobile) {
+                    padding-top: 50px;
+                }
+            }
+        }
+
+        .description {
+            margin-bottom: 15px;
+            
+        }
+    }
+  
+    

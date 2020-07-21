@@ -1,0 +1,95 @@
+@import "../../index.scss";
+
+.contacts {
+  width: 100%;
+  height: fit-content;
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  background: linear-gradient(#09090940, #09090940),
+    url(./Contact-banner.png) no-repeat top center;
+  background-size: cover;
+  position: relative;
+
+  @media (max-width: 1600) {
+    height: 100vh;
+  }
+
+  &__container {
+    width: 850px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 120px 70px 100px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $desktop) {
+      width: 100%;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 50px;
+    }
+  }
+
+  & input {
+    outline: none;
+    border: none;
+
+    @media (max-width: $mobile) {
+      width: 85%;
+    }
+
+    @media (max-width: $mobile-portrait) {
+      width: 100%;
+    }
+
+
+    &:active,
+    &:focus {
+      color: #f8ab11;
+      border: 2px solid #f8ab11;
+    }
+  }
+
+  &__form {
+    width: 90%;
+    margin: 50px auto;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+  }
+
+  &__complete_img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  &__complete_title {
+    width: 500px;
+    font-size: 30px;
+    color: #ffffff;
+    margin: 30px auto;
+    text-align: left;
+  }
+
+  &__footer {
+    width: 90%;
+    margin: 0;
+  }
+
+  &__left {
+    margin-right: 8%;
+  }
+
+  &__button {
+    margin: 25px auto;
+  }
+}

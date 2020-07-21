@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/components/Home/true-cuisine/true-cuisine.scss"
+    ],
+    "names": [],
+    "file": "true-cuisine.css"
+}

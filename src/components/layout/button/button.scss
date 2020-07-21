@@ -1,0 +1,38 @@
+@import "../../../index";
+
+.button {
+  width: 315px;
+  height: 50px;
+  color: #fff;
+  background-color: $orange;
+  text-transform: uppercase;
+  font-family: $Josefin Sans;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 2px;
+  padding-top: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover, &:active {
+    color: #F8AB11;
+    outline: none;
+    background: #fff;
+    border: 2px solid #F8AB11;
+  }
+
+  @media (max-width: $desktop) {
+    width: 280px;
+    height: 45px;
+  }
+
+  // &:active, &:visited, &:focus {
+  //   border: none;
+  //   outline: none;
+  // }
+
+  // &:active {
+  //   background: #7b560a;
+  // }
+}

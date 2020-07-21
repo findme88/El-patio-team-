@@ -1,0 +1,134 @@
+@import "../../index";
+
+.bakery {
+
+  &__wrap {
+    color: $grey;
+    width: 100%;
+    padding: 200px 200px 100px;
+    position: relative;
+    font-family: $JosefinSans;
+  
+    @media (max-width: $desktop) {
+      padding: 100px;
+    }
+  
+    @media (max-width: $mobile) {
+      padding: 50px;
+    }
+  }
+
+
+  &__title {
+    padding-bottom: 100px;
+
+    @media (max-width: $desktop) {
+      padding-bottom: 10px;
+    }
+
+    @media (max-width: $mobile) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+
+    &--1 {
+      @include size(300px, 400px);
+      @include pos($t: 80px, $l: 100px);
+      background: url(./bg-images/t-blueberries.png) no-repeat top center;
+      background-size: contain;
+
+      @media (max-width: $desktop) {
+        display: none;
+      }
+
+      @media (max-width: 1400px) {
+        @include size(250px, 320px);
+      }
+    }
+
+    &--2 {
+      @include size(370px, 1000px);
+      @include pos($t: 50px, $r: 0);
+      background: url(./bg-images/items.png) no-repeat top center;
+      background-size: contain;
+
+      @media (max-width: $desktop) {
+        display: none;
+      }
+
+      @media (max-width: 1400px) {
+        @include size(300px, 800px);
+      }
+    }
+
+    &--3 {
+      @include size(430px, 335px);
+      @include pos($t: 650px, $r: 0);
+      background: url(./bg-images/eggs.png) no-repeat top center;
+      background-size: contain;
+
+      @media (max-width: 1400px) {
+        @include size(300px, 300px);
+      }
+
+      @media (max-width: $desktop) {
+        display: none;
+      }
+    }
+
+    &--4 {
+      @include size(400px, 1700px);
+      @include pos($r: 0, $b: 0);
+      background: url(./bg-images/r-blueberries.png) no-repeat top center;
+      background-size: contain;
+
+      @media (max-width: $desktop) {
+        display: none;
+      }
+
+      @media (max-width: 1400px) {
+        @include size(300px, 1300px);
+      }
+    }
+
+    &--5 {
+      @include size(330px, 550px);
+      @include pos($b: 0, $l: 0);
+      background: url(./bg-images/l-blueberries.png) no-repeat top center;
+      background-size: contain;
+
+      
+      @media (max-width: 1600px) {
+        @include size(300px, 450px);
+      }
+      
+      @media (max-width: 1400px) {
+        @include size(230px, 350px);
+      }
+      
+      @media (max-width: $desktop) {
+        display: none;
+      }
+    }
+
+    &--6 {
+      @include size(800px);
+      @include pos($b: 22%, $l: 0);
+      transform: translateX(-60%);
+      background: url(./bg-images/pie.png) no-repeat top center;
+      background-size: contain;
+
+      @media (max-width: 1600px) {
+        @include size(600px);
+        @include pos($b: 25%, $l: -50px);
+      }
+
+      @media (max-width: $desktop) {
+      display: none;
+    }
+    }
+  }
+}

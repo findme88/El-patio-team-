@@ -1,0 +1,57 @@
+@import '../../../../../index.scss';
+
+.dish-item {
+    margin-bottom: 20px;
+    position: relative;
+
+    &__title {
+
+        @media (max-width: $mobile) {
+            font-size: 18px;
+        }
+
+        width: 75%;
+        font-family: Josefin Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        color: #706E6E;
+        margin-bottom: 5px;
+    }
+
+    &__desc {
+
+        @media (max-width: $mobile) {
+            font-size: 16px;
+        }
+
+        width: 75%;
+        font-family: Josefin Sans;
+        font-style: normal;
+        // font-weight: bold;
+        font-size: 20px;
+        color: #706E6E;
+        margin-bottom: 5px;
+    }
+
+    &__price {
+
+        @media (max-width: $mobile) {
+            font-size: 18px;
+        }
+
+        position: absolute;
+        top: 0;
+        right: -10px;
+
+        font-family: Josefin Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 22px;
+
+        text-align: right;
+
+        color: #F8AB11;
+    }
+}
